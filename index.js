@@ -22,11 +22,15 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //Rotas
 app.get('/', (req, res) =>  {
-    res.render('index')
+    res.render( 'index', {
+        title: 'Página Inicial'
+    })
 })
 
 app.get('/posts', (req, res) => {
-    res.render('posts')
+    res.render('posts' , {
+        title : 'Posts'
+    })
 })
 
 
